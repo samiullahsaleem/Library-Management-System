@@ -1,0 +1,20 @@
+{% extends "Users/base.html" %}
+
+{% block title %}
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <h1>Profile</h1>
+    <p>Username: {{ User.username }}</p>
+    <p>Email: {{ User.email }}</p>
+    <p>Full Name: {{ User.fullname }}</p>
+
+    <a href="{% url "logoutform" %}">Logout</a>
+
+{% else %}
+    <h1>Profile</h1>
+    <p>You are not logged in.</p>
+    <a href="{% url 'loginform' %}">Login</a>
+{% endif %}   
+{% endblock %}
