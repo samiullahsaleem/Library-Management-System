@@ -1,0 +1,21 @@
+{% extends "Library/base.html" %}
+
+{% block title %}
+Add New Book
+{% endblock %}
+{% block content %}
+<h1>Enter New Book Details</h1>
+<form action="{% url 'addnewbook' %}" method="post">
+    {% csrf_token %}
+    <table>
+        {{ authorform.as_table }}
+        {{ bookform.as_table }}
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Add New Book"></td>
+        </tr>
+
+    </table>
+</form>
+
+{% endblock %}

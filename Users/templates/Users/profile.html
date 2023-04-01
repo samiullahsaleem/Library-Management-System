@@ -9,7 +9,8 @@
     <p>Username: {{ User.username }}</p>
     <p>Email: {{ User.email }}</p>
     <p>Full Name: {{ User.fullname }}</p>
-
+    <a href="{% url 'search' %}">Click to Use Library</a>
+    <br>
     <a href="{% url "logoutform" %}">Logout</a>
 
 {% else %}
