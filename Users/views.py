@@ -39,12 +39,12 @@ def loginform(request):
             user = authenticate(request, username=username, password=password)
             if user is not None:
                 login(request, user)
-                next = request.GET.get('next')
-                print(next)
-                if next:
-                    return redirect(next)
+                next_url = request.GET.get('next')
+                print("\nnext_url: ", next_url)
+                if 'next' in request.POST:
+                    return redirect(request.POST['next'])
                 else:
-                    return redirect("profile")
+                    return redirect('profile')
             else:
                 return render(request, "Users/login.html", {"form": form, "error": True})
     else:

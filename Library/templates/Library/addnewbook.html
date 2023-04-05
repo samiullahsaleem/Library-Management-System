@@ -4,7 +4,10 @@
 Add New Book
 {% endblock %}
 {% block content %}
+<input type="hidden" name="next" value="{{ request.GET.next|default:''}}">
 <h1>Enter New Book Details</h1>
+<input type="hidden" name="next" value="">
+
 <form action="{% url 'addnewbook' %}" method="post">
     {% csrf_token %}
     <table>

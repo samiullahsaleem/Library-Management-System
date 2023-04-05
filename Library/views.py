@@ -6,7 +6,7 @@ from .forms import AuthorForm, BookForm
 from .models import Author, Book
 # Create your views here.
 
-@login_required(login_url=reverse_lazy('loginform'),redirect_field_name='next')
+@login_required(login_url='loginform')
 def addNewBook(request):
     if request.method == 'POST':
         authorform = AuthorForm(request.POST)
