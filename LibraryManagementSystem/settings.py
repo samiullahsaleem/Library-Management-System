@@ -79,15 +79,16 @@ WSGI_APPLICATION = "LibraryManagementSystem.wsgi.application"
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': str(BASE_DIR / 'db.sqlite3'),
     }
+}
 
         #  'NAME': 'samidatabase',
         # 'USER': 'samiullahsaleem',
         # 'PASSWORD': 'samiullahsaleem',
         # 'HOST': 'db4free.net',
         # 'PORT': '3306',
-}
+
 
 
 # Password validation
