@@ -23,7 +23,6 @@ decorator==5.1.1
 defusedxml==0.7.1
 
 Django==4.2
-django-pyodbc-azure==2.1.0.0
 executing==1.2.0
 fastjsonschema==2.16.3
 fonttools==4.39.0
