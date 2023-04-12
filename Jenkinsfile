@@ -2,9 +2,6 @@ CODE_CHANGES=getGitChanges() //Get the changes in the git repository
 pipeline
 {
     agent any
-    tools { 
-        
-    }
     parameters{
         string(name:"VERSION1",defaultvalue: "", description: "Version of the application")
         // choice(name:"VERSION",choices:['1','2','3'],description: "Environment to deploy")
