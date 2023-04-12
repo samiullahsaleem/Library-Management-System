@@ -3,7 +3,7 @@ pipeline
 {
     agent any
     parameters{
-        string(name:"VERSION1",defaultvalue: "", description: "Version of the application")
+        string(name:"VERSION1",defaultValue: "", description: "Version of the application")
         // choice(name:"VERSION",choices:['1','2','3'],description: "Environment to deploy")
         booleanParam(name:"VERSION",defaultValue: true,description: "Environment to deploy")
     }
