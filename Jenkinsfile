@@ -10,11 +10,7 @@ pipeline
     {
         stage('Build')
         {
-            when{
-                expression{ //Conditional expression
-                    BRANCH_NAME == 'dev' && CODE_CHANGES == true
-                }
-            }
+
             steps
             {
                 echo 'Building...'
@@ -24,12 +20,6 @@ pipeline
         {
             steps
             {
-                when {
-                    expression
-                {
-                        params.VERSION
-                }
-               }
                 echo 'Testing...'
             }
         }
