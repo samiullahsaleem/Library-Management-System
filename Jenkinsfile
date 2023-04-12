@@ -26,18 +26,14 @@ pipeline
         }
         stage('Test')
         {
-            when{
-                expression{ //Conditional expression
-                    BRANCH_NAME == 'dev' || BRANCH_NAME == 'master'
-                }
-            }
-            when {
-                expression{
-                        params.VERSION
-                }
-            }
             steps
             {
+                when {
+                    expression
+                {
+                        params.VERSION
+                }
+               }
                 echo 'Testing...'
             }
         }
@@ -50,18 +46,7 @@ pipeline
             }
         }
     }
-    post //Executes after the pipeline is completed
-    {
-        always{ //Executes after the pipeline is completed and it's actually conditional 
 
-        }
-        success{ //Executes after the pipeline is completed and it's actually conditional 
-
-        }
-        failure{ //Executes after the pipeline is completed and it's actually conditional 
-
-        }
-    }
 }
 
 
