@@ -1,4 +1,3 @@
-CODE_CHANGES=getGitChanges() //Get the changes in the git repository
 pipeline
 {
     agent any
