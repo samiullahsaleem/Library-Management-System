@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-!zakb2wer1#+olyq%)y4s2mm^x4+$-$imbccu_%ti3nn_onkd*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["4.246.192.124"]
 
 CSRF_TRUSTED_ORIGINS = ['https://samiullahsaleem-didactic-enigma-r64xvwwrgpwfp95-8000.preview.app.github.dev']
 
